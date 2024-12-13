@@ -22,7 +22,7 @@
           :lg="6"
           :xl="6"
           v-for="(item, index) in props.menu"
-          key="index"
+          :key="index"
         >
           <a-flex align="center" class="gap-[16px]">
             <a-avatar
@@ -33,7 +33,7 @@
             >
               <Icon :icon="item.icon" class="w-[31px] h-[31px]" />
             </a-avatar>
-            <a-flex vertical class="  ">
+            <a-flex vertical>
               <a-typography class="font-[700] text-[15px] text-[#2F2B3DB2]">
                 {{ item.title }}
               </a-typography>
@@ -74,7 +74,7 @@
           <a-progress
             type="dashboard"
             :steps="30"
-            :percent="85"
+            :percent="(currentDay / 365) * 100"
             :size="180"
             :stroke-color="{
               '0%': '#7367F0 ',
@@ -90,7 +90,7 @@
                 >
                 <a-typography-text
                   class="text-[16px] sm:text-[23px] font-medium"
-                  >365</a-typography-text
+                  >{{ currentDay }}</a-typography-text
                 >
               </a-flex>
             </template>
@@ -103,25 +103,27 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import dayjs from "dayjs";
+import dayOfYear from "dayjs/plugin/dayOfYear";
+
+dayjs.extend(dayOfYear);
+
+// Props definition
 const props = defineProps({
   menu: {
-    item: {
-      title: String,
-      data: String,
-      icon: String,
-      iconColor: String,
-      color: String,
-    },
-    type: Array<{
-      title: String;
-      data: String;
-      icon: String;
-      iconColor: String;
-      color: String;
+    type: Array as () => Array<{
+      title: string;
+      data: string;
+      icon: string;
+      iconColor: string;
+      color: string;
     }>,
+    required: true,
   },
 });
-const dayjs = useDayjs();
+
+// Dynamic day calculation
+const currentDay = dayjs().dayOfYear();
 </script>
 
 <style scoped></style>

@@ -2,7 +2,7 @@
   <a-layout style="min-height: 100vh">
     <a-layout-header class="headerStyle"><LayoutHeader /></a-layout-header>
     <a-layout-content class="contentStyle"><slot /></a-layout-content>
-    <!-- <a-layout-footer class="footerStyle"><LayoutFooter /></a-layout-footer> -->
+    <a-layout-footer class="footerStyle"><LayoutFooter /></a-layout-footer>
   </a-layout>
 </template>
 

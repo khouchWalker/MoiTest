@@ -2,31 +2,6 @@
 import { Icon } from "@iconify/vue";
 import { reactive } from "vue";
 
-const columns = [
-  {
-    title: "ឈ្មោះរាជធានី-ខេត្ត",
-    dataIndex: "names",
-  },
-  {
-    title: "ចំនួនសរុប",
-    dataIndex: "total",
-  },
-  {
-    title: "ចំនួនសរុបគិតជាភាគរយ",
-    dataIndex: "percentage",
-  },
-];
-
-const props = defineProps({
-  menu: {
-    type: Array as () => Array<{
-      name: string;
-      total: number;
-      percentage: number;
-    }>,
-  },
-});
-
 const tabButton = ref<1 | 2>(1);
 const switchTab = (tab: 1 | 2) => {
   tabButton.value = tab;
@@ -130,6 +105,4 @@ const switchTab = (tab: 1 | 2) => {
   </a-card>
 </template>
 
-<style scoped>
-/* Additional styles here for any custom adjustments */
-</style>
+<style scoped></style>

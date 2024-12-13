@@ -3,33 +3,35 @@
     <a-row class="justify-between">
       <a-col>
         <a-row class="gap-[10px]">
-          <a-flex class="gap-[5px] items-center">
+          <a-flex class="gap-[5px] justify-center items-center flex">
             <img
               src="/assets/icons/Group (1).png"
               alt=""
               class="h-[25px] w-[25px]"
             />
 
-            <a-typography class="text-[24px] text-[ #333333] font-[700px]"
+            <a-typography class="text-[24px] text-[ #333333] font-[700px] mt-2"
               >សេវាសាធារណៈឌីជីថល</a-typography
             >
           </a-flex>
           <a-flex
-            class="py-[5px] px-[20px] gap-[10px] bg-[#8888881A] rounded-r-[50px] rounded-l-[50px]"
+            class="py-[5px] px-[20px] gap-[10px] bg-[#8888881A] rounded-r-[50px] rounded-l-[50px] justify-center items-center"
           >
             <img
               src="/assets/icons/Rectangle (6).png"
               alt=""
               class="h-[25px] w-[25px]"
             />
-            <a-typography class="text-[20px] text-[ #333333] font-[300px]">
+            <a-typography
+              class="text-[20px] text-[ #333333] font-[300px] m-auto"
+            >
               សេវាច្រកចេញចូលតែមួយរាជធានី-ខេត្ត
             </a-typography>
           </a-flex>
         </a-row>
       </a-col>
       <a-col>
-        <a-row>
+        <a-row class="gap-3">
           <a-flex
             class="gap-[10px] xl:justify-end justify-cneter flex"
             align="center"

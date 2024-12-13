@@ -16,6 +16,7 @@
     "ant-design-vue": "^4.2.6",
     "dayjs": "^1.11.13",
     "dayjs-nuxt": "2.1.11",
+    "echarts": "^5.5.1",
     "init": "^0.1.2",
     "npx": "^10.2.2",
     "nuxt": "^3.14.159",
@@ -23,9 +24,11 @@
     "swiper": "^11.1.15",
     "tailwindcss": "^3.4.15",
     "vue": "latest",
+    "vue-echarts": "^7.0.3",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.18.1"
+    "@nuxt/types": "^2.18.1",
+    "nuxt-echarts": "^0.2.4"
   }
 }

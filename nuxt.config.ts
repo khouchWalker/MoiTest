@@ -7,9 +7,21 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/icon",
     "dayjs-nuxt",
+    "nuxt-echarts",
   ],
   dayjs: {
     locales: ["km", "en"],
     defaultLocale: "km",
+  },
+  echarts: {
+    charts: ["BarChart", "PieChart", "MapChart"],
+    components: [
+      "DatasetComponent",
+      "GridComponent",
+      "TooltipComponent",
+      "ToolboxComponent",
+      "LegendComponent",
+    ],
+    renderer: ["canvas", "svg"],
   },
 });
